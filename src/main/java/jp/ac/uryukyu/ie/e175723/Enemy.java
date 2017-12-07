@@ -68,7 +68,7 @@ public class Enemy  extends LivingThing{
                     System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", na, opponent.getName(), damage);
                     opponent.wounded(damage);
                 }else{
-                    System.out.printf("%sの攻撃！会心の一撃！！%sに%dのダメージを与えた！！\n", na, opponent.getName(), damage*2);
+                    System.out.printf("%sの攻撃！痛恨の一撃！！%sに%dのダメージを与えた！！\n", na, opponent.getName(), damage*2);
                     opponent.wounded(damage*2);
                 }
             }
