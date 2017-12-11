@@ -22,40 +22,11 @@ public class Hero extends LivingThing{
      */
     public Hero (String name, int maximumHP, int attack) {
         super(name,maximumHP,attack);
+        setdeathMassage("勇者%sは道半ばで力尽きてしまった。\n");
         System.out.printf("%sのHPは%d。攻撃力は%dです。\n", name, maximumHP, attack);
     }
 
-    /**
-     * getterメ/ソッドと同等。生死をboolean表現しているためメソッド名をisDead()とした。
-     * @return boolean
-     */
 
-    /**
-     * Enemyへ攻撃するメソッド。
-     * attackに応じて乱数でダメージを算出し、hero.wounded()によりダメージ処理を実行。
-     * @param e 攻撃対象
-     */
-
-
-    /**
-     * 自身へ攻撃されたときのダメージ処理をするメソッド。
-     * 指定されたダメージを hitPoint から引き、死亡判定を行う。
-     * @param damage 受けたダメージ
-     */
-    @Override
-    public void wounded(int damage){
-        int hp= getHitPoint();
-        String na = getName();
-        boolean de = getDead();
-        hp -= damage;
-        setHitPoint(hp);
-        if( hp<0 ) {
-            de=true;
-            setDead(de) ;
-            System.out.printf("勇者%sは道半ばで力尽きてしまった。\n", getName());
-        }
-
-    }
     @Override
     public void attack(LivingThing opponent){
         boolean de = getDead();

@@ -5,6 +5,7 @@ public class LivingThing {
     private int hitPoint;
     private int attack;
     private boolean dead;
+    private String deathMassage;
 
     public int getHitPoint(){return hitPoint;}
     public int getAttack(){return attack;}
@@ -14,6 +15,7 @@ public class LivingThing {
     public void setHitPoint(int hitPoint) {this.hitPoint = hitPoint;}
     public void setAttack(int attack) {this.attack = attack;}
     public void setDead(boolean dead) {this.dead = dead;}
+    public void setdeathMassage(String deathMassage){this.deathMassage=deathMassage;}
 
     public LivingThing (String name, int hitPoint, int attack){
         this.name=name;
@@ -28,6 +30,7 @@ public class LivingThing {
         return name;
     }
 
+    public String getDeathMassage(){return deathMassage;}
 
 
     public void attack(LivingThing opponent){
@@ -41,7 +44,8 @@ public class LivingThing {
         hitPoint -= damage;
         if( hitPoint < 0 ) {
             dead = true;
-            System.out.printf("%sは倒れた。\n", name);
+
+            System.out.printf("%s\n", deathMassage);
         }
     }
 
