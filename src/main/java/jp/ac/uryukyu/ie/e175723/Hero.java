@@ -56,6 +56,7 @@ public class Hero extends LivingThing{
         }
 
     }
+    @Override
     public void attack(LivingThing opponent){
         boolean de = getDead();
         String na = getName();

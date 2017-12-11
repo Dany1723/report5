@@ -54,6 +54,7 @@ public class Enemy  extends LivingThing{
             System.out.printf("モンスター%sは倒れた。\n", na);
         }
     }
+    @Override
     public void attack(LivingThing opponent){
         boolean de = getDead();
         String na = getName();
